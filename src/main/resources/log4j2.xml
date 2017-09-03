@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="ALL" advertiser="multicastdns">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="custom layout %d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+        <File name="log4j2chainsawappender" fileName="output.log" bufferedIO="false" advertiseURI="file:///C:/Users/gswiec/IdeaProjects/Log4j2ChainsawExample/output.log" advertise="true">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="trace">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="log4j2chainsawappender"/>
+        </Root>
+    </Loggers>
+</Configuration>
